@@ -4,8 +4,8 @@ from email.mime.text import MIMEText
 
 
 def send_email(receiver_email, body):
-    sender_email = "sanjarbeksocial@gmail.com"
-    password = "ajvd xsnx jowk hujh"
+    sender_email = "xamidullo2105@gmail.com"
+    password = "gcyb fllo ofcs oihj"
 
     subject = "Confirmation code"
 
@@ -21,7 +21,7 @@ def send_email(receiver_email, body):
             server.login(sender_email, password)
             text = msg.as_string()
             server.sendmail(sender_email, receiver_email, text)
-            print("Email sent successfully!")
+            print("Email sent successfully ✅")
 
     except Exception as e:
         print(f"Failed to send email. Error: {e}")
