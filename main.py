@@ -1,24 +1,36 @@
-from views import register
+from views import register, login, logout
 
 
 def main():
+    
     print("""
-        1.Register
-        2.Login
-        3.Logout
+        $*********************$    
+        |    1. Register      |
+        ***********************
+        |    2. Login         |
+        ***********************
+        |    3. Logout        |
+        $*********************$
         """)
     
     
     choice = input("Enter your choice: ")
+    
     if choice == "1":
-        register()
+        if register():
+            print("You can login now")
+        else:
+            print("Code is invalid")
+            
     elif choice == "2":
-        pass
+        login()
+    
     elif choice == "3":
-        print("Good bye:)")
-        return
+        logout()
+    
     else:
         print("Invalid choice")
+    return main()
 
 
 if __name__ == "__main__":
