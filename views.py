@@ -18,6 +18,7 @@ def register():
 
     send_email(receiver_email=email, body=str(otp))
     append(filename="users",data=[full_name, email,password1])
+    append(filename="codes", data=[email, otp])
     return check_otp(otp, email)
 
 
